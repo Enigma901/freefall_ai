@@ -179,10 +179,10 @@ def analyze_video(video_path, fps_override, known_mm, auto_cal, lower_hsv, upper
     t_smooth = np.linspace(0, max(times), 100)
     if use_drag:
         h_smooth = drag_model(t_smooth, g, k)
-        label = f'拟合 (含阻力) g={g:.2f}'
+        label = f'Fitting (with resistance) g={g:.2f}'
     else:
         h_smooth = ideal_model(t_smooth, g)
-        label = f'拟合 (理想) g={g:.2f}'
+        label = f'fitting (ideal) g={g:.2f}'
     ax.plot(t_smooth, h_smooth, 'r-', label=label)
     ax.set_xlabel('Time (s)')
     ax.set_ylabel('Falling Height (m)')

@@ -184,8 +184,8 @@ def analyze_video(video_path, fps_override, known_mm, auto_cal, lower_hsv, upper
         h_smooth = ideal_model(t_smooth, g)
         label = f'拟合 (理想) g={g:.2f}'
     ax.plot(t_smooth, h_smooth, 'r-', label=label)
-    ax.set_xlabel('时间 (s)')
-    ax.set_ylabel('下落距离 (m)')
+    ax.set_xlabel('Time (s)')
+    ax.set_ylabel('Falling Height (m)')
     ax.legend()
     ax.grid()
     st.pyplot(fig)
@@ -196,8 +196,8 @@ def analyze_video(video_path, fps_override, known_mm, auto_cal, lower_hsv, upper
         fig2, ax2 = plt.subplots(figsize=(8,3))
         ax2.scatter(times, residuals, s=10, color='green')
         ax2.axhline(y=0, color='r', linestyle='--')
-        ax2.set_xlabel('时间 (s)')
-        ax2.set_ylabel('残差 (mm)')
+        ax2.set_xlabel('Time (s)')
+        ax2.set_ylabel('Residual (mm)')
         ax2.grid()
         st.pyplot(fig2)
 

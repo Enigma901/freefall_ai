@@ -175,7 +175,7 @@ def analyze_video(video_path, fps_override, known_mm, auto_cal, lower_hsv, upper
     plt.rcParams['font.sans-serif'] = matplotlib.rcParams['font.sans-serif']  # 沿用之前设置
     plt.rcParams['axes.unicode_minus'] = False
     fig, ax = plt.subplots(figsize=(8,5))
-    ax.scatter(times, hs, s=10, label='实测数据', color='blue')
+    ax.scatter(times, hs, s=10, label='Tested data', color='blue')
     t_smooth = np.linspace(0, max(times), 100)
     if use_drag:
         h_smooth = drag_model(t_smooth, g, k)
